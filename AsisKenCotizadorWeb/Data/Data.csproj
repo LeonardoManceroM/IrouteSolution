@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FAD5AA4B-8F1F-403E-BC43-ECB93CFEC4D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Data</RootNamespace>
+    <AssemblyName>Data</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.5.0.0\lib\netstandard2.0\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.5.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.5.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.6.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.6.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Channels.4.7.0\lib\netstandard2.0\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.3\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acceso\AgenciaDao.cs" />
+    <Compile Include="Acceso\BeneficiosAdicionalesDao.cs" />
+    <Compile Include="Acceso\CalculaTarifasDao.cs" />
+    <Compile Include="Acceso\CaracteristicasDao.cs" />
+    <Compile Include="Acceso\CategoriasDao.cs" />
+    <Compile Include="Acceso\ConfiguracionesDao.cs" />
+    <Compile Include="Acceso\CotizacionDao.cs" />
+    <Compile Include="Acceso\CotizacionDependienteDao.cs" />
+    <Compile Include="Acceso\CotizacionPoolDao.cs" />
+    <Compile Include="Acceso\EnvioCorreoDao.cs" />
+    <Compile Include="Acceso\EstadoDao.cs" />
+    <Compile Include="Acceso\MenuDao.cs" />
+    <Compile Include="Acceso\PlanesDao.cs" />
+    <Compile Include="Acceso\ProductosDao.cs" />
+    <Compile Include="Acceso\ProvinciaDao.cs" />
+    <Compile Include="Acceso\RegionesDao.cs" />
+    <Compile Include="Acceso\RolDao.cs" />
+    <Compile Include="Acceso\SeccionesDao.cs" />
+    <Compile Include="Acceso\TarifasDao.cs" />
+    <Compile Include="Acceso\TipoUsuarioDao.cs" />
+    <Compile Include="Acceso\UsuarioDao.cs" />
+    <Compile Include="Conexion\Base.cs" />
+    <Compile Include="Conexion\ConSql.cs" />
+    <Compile Include="Entidades\Agencia.cs" />
+    <Compile Include="Entidades\BeneficioPlan.cs" />
+    <Compile Include="Entidades\BeneficiosAdicionales.cs" />
+    <Compile Include="Entidades\CalculaTarifas.cs" />
+    <Compile Include="Entidades\CalculaTarifasResultado.cs" />
+    <Compile Include="Entidades\Caracteristicas.cs" />
+    <Compile Include="Entidades\CaracteristicasSeccion.cs" />
+    <Compile Include="Entidades\CatalogoCaracteristica.cs" />
+    <Compile Include="Entidades\Categorias.cs" />
+    <Compile Include="Entidades\CompararPlanes.cs" />
+    <Compile Include="Entidades\ConsultaCotizacion.cs" />
+    <Compile Include="Entidades\CorreoRequest.cs" />
+    <Compile Include="Entidades\EnvioCorreo.cs" />
+    <Compile Include="Entidades\GeneraCotizacionIndividual.cs" />
+    <Compile Include="Entidades\Configuraciones.cs" />
+    <Compile Include="Entidades\CotizacionDependiente.cs" />
+    <Compile Include="Entidades\CotizacionCategoriaPool.cs" />
+    <Compile Include="Entidades\Cotizaciones.cs" />
+    <Compile Include="Entidades\CotizacionesPool.cs" />
+    <Compile Include="Entidades\GeneraCotizacionPool.cs" />
+    <Compile Include="Entidades\ErrorGenerico.cs" />
+    <Compile Include="Entidades\Estado.cs" />
+    <Compile Include="Entidades\GeneraCotizacionResultado.cs" />
+    <Compile Include="Entidades\GMailer.cs" />
+    <Compile Include="Entidades\HeaderTarifa.cs" />
+    <Compile Include="Entidades\MenuPrincipal.cs" />
+    <Compile Include="Entidades\PlantillasCaracteristicas.cs" />
+    <Compile Include="Entidades\Productos.cs" />
+    <Compile Include="Entidades\Provincias.cs" />
+    <Compile Include="Entidades\RateConfigModel.cs" />
+    <Compile Include="Entidades\Regiones.cs" />
+    <Compile Include="Entidades\Rol.cs" />
+    <Compile Include="Entidades\Salida.cs" />
+    <Compile Include="Entidades\SalidaPlan.cs" />
+    <Compile Include="Entidades\SeccionCaracteristicas.cs" />
+    <Compile Include="Entidades\Secciones.cs" />
+    <Compile Include="Entidades\TarifaEdad.cs" />
+    <Compile Include="Entidades\Planes.cs" />
+    <Compile Include="Entidades\TarifaGenero.cs" />
+    <Compile Include="Entidades\TarifaGenDependiente.cs" />
+    <Compile Include="Entidades\TarifaNiñoSolo.cs" />
+    <Compile Include="Entidades\TarifaPool.cs" />
+    <Compile Include="Entidades\TarifasCategoria.cs" />
+    <Compile Include="Entidades\TiposTarifa.cs" />
+    <Compile Include="Entidades\TipoUsuario.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
