@@ -96,5 +96,30 @@ namespace CotizadorWeb.Models
             }
 
         }
+
+
+        public void EliminarForAgeConfigModel(ForAgeConfigModel ageConfigModel)
+        {
+            sql = new ConSql();
+
+            try
+            {
+                sql.Comando.CommandType = CommandType.Text;
+                sql.Comando.CommandText = "update tblageconfigmodel set estado=0 where idRango=@idRango";
+                sql.Comando.Parameters.AddWithValue("IdRango", ageConfigModel.IdRango);
+                //sql.Comando.Parameters.AddWithValue("Estado", ageConfigModel.Estado);
+                sql.EjecutaQuery();
+            }
+            catch
+            {
+                sql.CerrarConexion();
+                throw;
+            }
+            finally
+            {
+                sql.CerrarConexion();
+            }
+
+        }
     }
 }

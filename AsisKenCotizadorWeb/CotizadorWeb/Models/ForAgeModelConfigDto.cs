@@ -85,5 +85,28 @@ namespace CotizadorWeb.Models
             }
             return Id;
         }
+
+        public int EliminarForAgeConfigModel(ForAgeConfigModel ageConfigModel)
+        {
+            int Id = 1;
+            try
+            {
+                if (!isOnline)
+                {
+                    Log.Info("Actualizar ForAgeModels OffLine");
+                }
+                else
+                {
+                    AgeConfigModelDao.EliminarForAgeConfigModel(ageConfigModel);
+                    Log.Info("Actualizar ForAgeModels OnLine");
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message, ex);
+                throw;
+            }
+            return Id;
+        }
     }
 }
