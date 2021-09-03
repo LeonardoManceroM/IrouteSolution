@@ -930,6 +930,32 @@ namespace CotizadorWeb.Controllers
             }
         }
 
+
+
+        [HttpPut]
+        [Route("api/EliForageConfigModel")]
+        public IHttpActionResult EliForAgeConfigModel(ForAgeConfigModel ageConfigModel)
+        {
+            try
+            {
+                if (ageConfigModel.IdRango == 0)
+                {
+                    return Content(HttpStatusCode.BadRequest, new ErrorGenerico { Mensaje = "Debe de Ingresar codigo a modificar" });
+                }
+
+                
+                int Id = ageConfigModelDto.EliminarForAgeConfigModel(ageConfigModel);
+
+                Log.Info("ForAgeConfigModel con exito.");
+                return Ok(new Salida { Codigo = 1, Mensaje = "Eliminado con exito", IdIngreso = Id });
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message, ex);
+                return Content(HttpStatusCode.InternalServerError, new ErrorGenerico { Mensaje = ex.Message });
+            }
+        }
+
         //Se realizaron los metodos de INGRESO, CONSULTAR Y ACTUALIZAR DE EL MODELO ForAgeConfigModel
         //Autor: Leonardo Mancero M.
 
