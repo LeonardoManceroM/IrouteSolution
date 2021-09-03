@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CotizadorWeb", "CotizadorWeb\CotizadorWeb.csproj", "{512CB9BC-3ED0-4D45-984E-E0A95215E69D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{FAD5AA4B-8F1F-403E-BC43-ECB93CFEC4D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{512CB9BC-3ED0-4D45-984E-E0A95215E69D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{512CB9BC-3ED0-4D45-984E-E0A95215E69D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{512CB9BC-3ED0-4D45-984E-E0A95215E69D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{512CB9BC-3ED0-4D45-984E-E0A95215E69D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAD5AA4B-8F1F-403E-BC43-ECB93CFEC4D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAD5AA4B-8F1F-403E-BC43-ECB93CFEC4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAD5AA4B-8F1F-403E-BC43-ECB93CFEC4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAD5AA4B-8F1F-403E-BC43-ECB93CFEC4D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16662044-73B0-4E99-A88F-8CF5C40661B0}
+	EndGlobalSection
+EndGlobal
